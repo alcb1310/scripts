@@ -1,0 +1,14 @@
+#! /bin/bash
+# Author: Andres Court
+# Date: 2024-02-26
+# Description: Change to a different git branch
+
+branch=`git branch --all | fzf --reverse --preview "git log --color=always {1} --oneline --abbre-commit"`
+
+if [[ -z "$branch" ]]; then
+    echo "No branch selected"
+    exit 1
+fi
+
+toCheckout=$(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+git checkout "$toCheckout"
