@@ -1,0 +1,13 @@
+#! /bin/bash
+# Author: Andres Court
+# Date: 2024-02-26
+# Description: load a tmux session from  tmuxifier
+
+sessions=`tmuxifier list-sessions | fzf --reverse --prompt="Select Session"`
+
+if [[ -z $sessions ]]; then
+    echo "No session selected"
+    exit 1
+fi
+
+tmuxifier load-session $sessions
