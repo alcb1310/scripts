@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm
+sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake
 
 yay -S --noconfirm --needed sesh-bin kanata-bin
 
@@ -57,10 +57,10 @@ echo "$shell"
 
 chsh -s "$shell"
 go install golang.org/x/tools/gopls@latest
+go install mvdan.cc/gofumpt@latest
+go install -v github.com/incu6us/goimports-reviser/v3@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
 
 /home/andres/.tmux/plugins/tpm/scripts/install_plugins.sh
 
-sudo udevadm control --reload-rules && sudo udevadm trigger
-sudo modprobe uinput
-
-mkdir -p ~/.config/systemd/user
+sudo npm install -g @biomejs/biome emmet-ls @tailwindcss/language-server typescript-language-server
