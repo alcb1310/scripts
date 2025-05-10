@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs zsh fzf starship ghostty wezterm wofi
+sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm
 
 yay -S --noconfirm --needed sesh-bin kanata-bin
 
@@ -48,6 +48,10 @@ if [ ! -L "$HOME/.config/wofi" ] || [ ! -e "$HOME/.config/wofi" ]; then
   ln -s $HOME/dotfiles/.config/wofi $HOME/.config/wofi
 fi
 
+if [ ! -L "$HOME/.config/waybar" ] || [ ! -e "$HOME/.config/waybar" ]; then
+  ln -s $HOME/dotfiles/.config/waybar $HOME/.config/waybar
+fi
+
 shell=$(which zsh)
 echo "$shell"
 
@@ -55,3 +59,8 @@ chsh -s "$shell"
 go install golang.org/x/tools/gopls@latest
 
 /home/andres/.tmux/plugins/tpm/scripts/install_plugins.sh
+
+sudo udevadm control --reload-rules && sudo udevadm trigger
+sudo modprobe uinput
+
+mkdir -p ~/.config/systemd/user
