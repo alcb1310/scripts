@@ -64,3 +64,26 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 /home/andres/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 sudo npm install -g @biomejs/biome emmet-ls @tailwindcss/language-server typescript-language-server
+
+git config --global pull.rebase false
+
+git config --global alias.l "log --oneline"
+git config --global alias.l1 "log --oneline -n 10"
+git config --global alias.l2 "log --oneline -n 20"
+git config --global alias.l3 "log --oneline -n 30"
+git config --global alias.l4 "log --oneline -n 40"
+git config --global alias.st "status -s"
+git config --global alias.c "commit -v"
+git config --global alias.dw "diff --word-diff"
+
+git config --global push.autoSetupRemote true
+git config --global push.default current
+git config --global push.followTags true
+
+git config --global fetch.prune true
+
+git config --global diff.algorithm histogram
+git config --global diff.colorMoved plain
+git config --global core.editor nvim
+
+git config --global merge.conflictstyle diff3
