@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs zsh fzf starship
+sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs zsh fzf starship ghostty wezterm wofi
 
 yay -S --noconfirm --needed sesh-bin kanata-bin
 
@@ -34,6 +34,18 @@ fi
 
 if [ ! -L "$HOME/.config/hypr" ] || [ ! -e "$HOME/.config/hypr" ]; then
   ln -s $HOME/dotfiles/.config/hypr $HOME/.config/hypr
+fi
+
+if [ ! -L "$HOME/.config/ghostty" ] || [ ! -e "$HOME/.config/ghostty" ]; then
+  ln -s $HOME/dotfiles/.config/ghostty $HOME/.config/ghostty
+fi
+
+if [ ! -L "$HOME/.config/wezterm" ] || [ ! -e "$HOME/.config/wezterm" ]; then
+  ln -s $HOME/dotfiles/.config/wezterm $HOME/.config/wezterm
+fi
+
+if [ ! -L "$HOME/.config/wofi" ] || [ ! -e "$HOME/.config/wofi" ]; then
+  ln -s $HOME/dotfiles/.config/wofi $HOME/.config/wofi
 fi
 
 shell=$(which zsh)
