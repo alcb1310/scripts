@@ -87,3 +87,6 @@ git config --global diff.colorMoved plain
 git config --global core.editor nvim
 
 git config --global merge.conflictstyle diff3
+
+echo "To setup kanata please follow the documentaton at: "
+echo "https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md"
