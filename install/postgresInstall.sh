@@ -1,5 +1,4 @@
-sudo pacman -Syyu
-sudo pacman -S postgresql
+sudo pacman -S --noconfirm --needed postgresql
 name=$(whoami)
 echo "Initializing database files\n\n"
 sudo -iu postgres initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
