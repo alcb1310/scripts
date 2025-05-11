@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake
+sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake pavucontrol less discord ttf-font-awesome 
 
 yay -S --noconfirm --needed sesh-bin kanata-bin
 
@@ -60,6 +60,8 @@ go install golang.org/x/tools/gopls@latest
 go install mvdan.cc/gofumpt@latest
 go install -v github.com/incu6us/goimports-reviser/v3@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
+go install github.com/air-verse/air@latest
+go install github.com/a-h/templ/cmd/templ@latest
 
 /home/andres/.tmux/plugins/tpm/scripts/install_plugins.sh
 
