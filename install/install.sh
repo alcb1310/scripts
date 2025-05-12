@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake pavucontrol less discord ttf-font-awesome 
+sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake pavucontrol less discord ttf-font-awesome qt6-svg qt6-declarative qt5-quickcontrols2 yazi
 
 yay -S --noconfirm --needed sesh-bin kanata-bin
 
