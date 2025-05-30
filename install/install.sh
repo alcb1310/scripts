@@ -1,8 +1,8 @@
 #! /bin/bash
 
-sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake pavucontrol less discord ttf-font-awesome qt6-svg qt6-declarative qt5-quickcontrols2 yazi
+sudo pacman -S --noconfirm --needed neovim go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake pavucontrol less discord ttf-font-awesome qt6-svg qt6-declarative qt5-quickcontrols2 yazi tldr fd ripgrep xdg-desktop-portal-hyprland
 
-yay -S --noconfirm --needed sesh-bin kanata-bin
+yay -S --noconfirm --needed sesh-bin kanata-bin docker-git
 
 if [ ! -d '$HOME/.tmux/plugins/tpm' ]; then
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
@@ -89,6 +89,8 @@ git config --global diff.colorMoved plain
 git config --global core.editor nvim
 
 git config --global merge.conflictstyle diff3
+
+sudo usermod -aG docker ${USER}
 
 echo "To setup kanata please follow the documentaton at: "
 echo "https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md"
