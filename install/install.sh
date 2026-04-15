@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 
 sudo pacman -Syyu
-sudo pacman -S --noconfirm --needed neovim tree-sitter-cli go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake pavucontrol less discord ttf-font-awesome qt6-svg qt6-declarative qt5-quickcontrols2 yazi tldr fd ripgrep xdg-desktop-portal-hyprland tmux zoxide docker
+sudo pacman -S --noconfirm --needed neovim tree-sitter-cli go lua-language-server nodejs npm zsh fzf starship ghostty wezterm wofi hyprpaper hyprlock hypridle waybar ttf-iosevka-nerd pnpm cmake pavucontrol less discord ttf-font-awesome qt6-svg qt6-declarative qt5-quickcontrols2 yazi tldr fd ripgrep xdg-desktop-portal-hyprland tmux zoxide docker github-cli
 
 yay -S --noconfirm --needed sesh-bin kanata-bin brave-bin
 
