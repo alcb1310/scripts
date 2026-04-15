@@ -19,7 +19,6 @@ fi
 if [ ! -d '$HOME/dotfiles' ]; then
   git clone https://github.com/alcb1310/dotfiles $HOME/dotfiles
 
-  mv $HOME/.bashrc $HOME/.bashrc.bak
   ln -s $HOME/dotfiles/.bashrc $HOME/.bashrc
 fi
 
